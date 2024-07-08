@@ -4,6 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>52881f14-24a1-4389-a084-1daf0fa9f53c</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
@@ -11,6 +12,28 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Data\" />
+    <None Remove="Services\" />
+    <None Remove="DTOs\" />
+    <None Remove="ReportsTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
+    <Folder Include="Services\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="ReportsTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReportsTemplates\DemoReport.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
