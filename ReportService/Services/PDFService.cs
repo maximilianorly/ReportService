@@ -73,7 +73,7 @@ namespace ReportService.Services
             }
 
             htmlTemplate = htmlTemplate.Replace("{{Date}}", DateTime.UtcNow.ToString("yyyy-MM-dd"));
-            htmlTemplate = htmlTemplate.Replace("{{transactionDetail}}", transactionDetail.ToString());
+            htmlTemplate = htmlTemplate.Replace("{{TransactionDetail}}", transactionDetail.ToString());
 
             return htmlTemplate;
         }
